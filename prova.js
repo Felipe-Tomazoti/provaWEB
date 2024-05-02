@@ -1,6 +1,6 @@
 let estatesList = document.getElementById('estadosID');
 let links = document.getElementById('link');
-
+let x = 0;
 if(estatesList){
     let nomes;
     const req = fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados`);
@@ -10,7 +10,11 @@ if(estatesList){
             dfs = data.map((x)=> x.sigla);
             nomes.forEach(element => {
                 li = document.createElement("li");
-                li.textContent = element;
+                a = document.createElement("a");
+                a.href=`./municipios/index.html?uf=${dfs[x]}` 
+                x++;
+                a.textContent = element
+                li.appendChild(a)
                 estatesList.appendChild(li);
             });
         })

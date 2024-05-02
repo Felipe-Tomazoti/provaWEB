@@ -1,26 +1,14 @@
-body,
-h1,
-h2,
-p,
-ul,
-ol,
-li,
-figure,
-table,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
-
-main {
+body {
     display: grid;
-    grid-template-rows: 1fr ;
-    margin: 10px;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    margin: 0;
   }
 
   header{
     background-color: #0074d9;
+    text-align: center;
+    padding: 25px;
   }
 
   footer{
@@ -37,9 +25,4 @@ main {
     align-items: center;
     display: flex;
     flex-direction: column;
-  }
-
-  header{
-    text-align: center;
-    padding: 25px;
   }
